@@ -30,7 +30,7 @@ export function Header() {
       <div className="container-responsive">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-2">
-            Nexus<span className="text-primary">Studio</span>
+            Nexu<span className="text-primary">Studio</span>
           </a>
 
           {/* Desktop Navigation */}

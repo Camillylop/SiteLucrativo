@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="#" className="text-2xl font-bold mb-4 block text-foreground flex items-center gap-2">
-              Nexus<span className="text-primary">Studio</span>
+              Nexu<span className="text-primary">Studio</span>
             </a>
             <p className="text-zinc-400 mb-6 text-sm md:text-base">
               Criação de sites profissionais focados em resultados.
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-center text-sm text-zinc-500">
-          <p>© {new Date().getFullYear()} Nexus Studio. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} NexuStudio. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
