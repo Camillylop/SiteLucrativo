@@ -10,7 +10,8 @@ const projects = [
     result: "+40% contatos/mês",
     color: "from-emerald-500/20 to-teal-500/20",
     border: "border-emerald-500/20",
-    text: "text-emerald-400"
+    text: "text-emerald-400",
+    link: "https://nutrisport-beta.vercel.app/"
   },
   {
     segment: "Clínica Odontológica",
@@ -19,7 +20,8 @@ const projects = [
     result: "Novos pacientes Google",
     color: "from-blue-500/20 to-cyan-500/20",
     border: "border-blue-500/20",
-    text: "text-blue-400"
+    text: "text-blue-400",
+    link: "#"
   },
   {
     segment: "Advogado",
@@ -28,7 +30,8 @@ const projects = [
     result: "Dobro de consultas",
     color: "from-amber-500/20 to-orange-500/20",
     border: "border-amber-500/20",
-    text: "text-amber-400"
+    text: "text-amber-400",
+    link: "#"
   },
   {
     segment: "Loja de Roupas",
@@ -37,7 +40,8 @@ const projects = [
     result: "Vendas organizadas",
     color: "from-pink-500/20 to-rose-500/20",
     border: "border-pink-500/20",
-    text: "text-pink-400"
+    text: "text-pink-400",
+    link: "#"
   },
 ];
 
@@ -85,9 +89,14 @@ export function Portfolio() {
                   <span className={`inline-block px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-md border ${project.border} ${project.text} text-sm font-medium`}>
                     {project.segment}
                   </span>
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <a
+                    href={project.link}
+                    target={project.link !== "#" ? "_blank" : "_self"}
+                    rel={project.link !== "#" ? "noopener noreferrer" : ""}
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 hover:bg-white/20 cursor-pointer"
+                  >
                     <ExternalLink className="w-5 h-5 text-white" />
-                  </div>
+                  </a>
                 </div>
 
                 <div className="space-y-6 flex-grow">
