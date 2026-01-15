@@ -4,12 +4,12 @@ const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Olá! Gostaria de solici
 
 export function Footer() {
   return (
-    <footer id="contato" className="bg-background border-t border-white/10 text-zinc-300">
+    <footer id="contato" className="bg-muted/30 border-t border-border text-muted-foreground">
       <div className="container-responsive py-12 md:py-16">
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <div>
-            <a href="#" className="text-2xl font-bold mb-4 block text-white flex items-center gap-2">
+            <a href="#" className="text-2xl font-bold mb-4 block text-foreground flex items-center gap-2">
               Site<span className="text-primary">Lucrativo</span>
             </a>
             <p className="text-zinc-400 mb-6 text-sm md:text-base">
@@ -20,7 +20,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-white text-lg mb-4">Links Rápidos</h4>
+            <h4 className="font-bold text-foreground text-lg mb-4">Links Rápidos</h4>
             <nav className="flex flex-col gap-3">
               <a href="#servicos" className="text-zinc-400 hover:text-primary transition-colors">
                 Serviços
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-white text-lg mb-4">Contato</h4>
+            <h4 className="font-bold text-foreground text-lg mb-4">Contato</h4>
             <div className="flex flex-col gap-4">
               <a
                 href={WHATSAPP_LINK}

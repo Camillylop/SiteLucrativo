@@ -1,136 +1,121 @@
 import { motion } from "framer-motion";
-import { ExternalLink, TrendingUp, ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
     segment: "Nutricionista",
-    problem: "Profissional com dificuldade de conseguir novos pacientes.",
-    solution: "Site profissional com foco em SEO local e agendamento.",
-    result: "+40% contatos/mês",
-    color: "from-emerald-500/20 to-teal-500/20",
-    border: "border-emerald-500/20",
-    text: "text-emerald-400",
+    title: "NutriSport",
+    description: "Site profissional com sistema de agendamento integrado.",
+    result: "+40% conversão",
+    image: "/images/nutri.png",
     link: "https://nutrisport-beta.vercel.app/"
   },
   {
-    segment: "Clínica Odontológica",
-    problem: "Sem presença digital, perdendo pacientes para concorrentes.",
-    solution: "Site institucional com galeria e depoimentos.",
-    result: "Novos pacientes Google",
-    color: "from-blue-500/20 to-cyan-500/20",
-    border: "border-blue-500/20",
-    text: "text-blue-400",
+    segment: "Odontologia",
+    title: "Apex Dental",
+    description: "Presença digital moderna com galeria de casos.",
+    result: "#1 no Google",
+    image: "/images/dentist.png",
     link: "#"
   },
   {
-    segment: "Advogado",
-    problem: "Precisava transmitir autoridade e captar leads.",
-    solution: "Landing page focada em áreas de atuação.",
-    result: "Dobro de consultas",
-    color: "from-amber-500/20 to-orange-500/20",
-    border: "border-amber-500/20",
-    text: "text-amber-400",
+    segment: "Advocacia",
+    title: "Aurum Legal",
+    description: "Landing page premium focada em autoridade.",
+    result: "2x consultas",
+    image: "/images/lawyer.png",
     link: "#"
   },
   {
-    segment: "Loja de Roupas",
-    problem: "Queria expandir vendas pelo Instagram e WhatsApp.",
-    solution: "Catálogo online com integração direta.",
-    result: "Vendas organizadas",
-    color: "from-pink-500/20 to-rose-500/20",
-    border: "border-pink-500/20",
-    text: "text-pink-400",
+    segment: "E-commerce",
+    title: "Moderne",
+    description: "Loja completa com catálogo e checkout.",
+    result: "Vendas 24/7",
+    image: "/images/fashion.png",
     link: "#"
   },
 ];
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-background relative">
-      {/* Background decoration */}
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+    <section id="portfolio" className="py-32 bg-background">
+      <div className="container-responsive">
 
-      <div className="container-responsive relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium mb-6 backdrop-blur-sm">
-            Portfólio Selecionado
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Projetos que <span className="text-gradient">Geram Resultados</span>
+          <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-4 tracking-tight">
+            Projetos recentes
           </h2>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-            Conheça alguns casos de sucesso de clientes que transformaram seus negócios
-            através de um site profissional.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal">
+            Cada projeto é desenvolvido com atenção aos detalhes.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.segment}
-              initial={{ opacity: 0, y: 20 }}
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target={project.link !== "#" ? "_blank" : "_self"}
+              rel={project.link !== "#" ? "noopener noreferrer" : ""}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300`}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="group block rounded-3xl border border-border bg-card overflow-hidden hover:shadow-strong transition-all duration-500"
             >
-              {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              {/* Image */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                />
 
-              <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="flex items-start justify-between mb-8">
-                  <span className={`inline-block px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-md border ${project.border} ${project.text} text-sm font-medium`}>
-                    {project.segment}
-                  </span>
-                  <a
-                    href={project.link}
-                    target={project.link !== "#" ? "_blank" : "_self"}
-                    rel={project.link !== "#" ? "noopener noreferrer" : ""}
-                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 hover:bg-white/20 cursor-pointer"
-                  >
-                    <ExternalLink className="w-5 h-5 text-white" />
-                  </a>
-                </div>
-
-                <div className="space-y-6 flex-grow">
-                  <div>
-                    <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">O Desafio</h4>
-                    <p className="text-zinc-300 text-base md:text-lg leading-snug">{project.problem}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">A Solução</h4>
-                    <p className="text-zinc-300 text-base md:text-lg leading-snug">{project.solution}</p>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg bg-black/20 ${project.text}`}>
-                      <TrendingUp className="w-5 h-5" />
-                    </div>
-                    <span className="font-bold text-white text-lg">{project.result}</span>
+                {/* Floating badge */}
+                <div className="absolute top-6 right-6">
+                  <div className="w-11 h-11 rounded-full bg-background/95 backdrop-blur-md flex items-center justify-center border border-border/50 group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                    <ArrowUpRight className="w-5 h-5" />
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
 
-        <div className="text-center">
-          <Button variant="outline" size="xl" className="border-white/10 bg-white/5 hover:bg-white/10 text-white min-w-[200px]" asChild>
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
-              Ver Mais Projetos
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
+              {/* Content */}
+              <div className="p-8">
+                <div className="text-xs text-muted-foreground uppercase tracking-widest mb-3 font-medium">
+                  {project.segment}
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mb-3 tracking-tight">
+                  {project.title}
+                </h3>
+
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <span className="text-sm font-semibold text-foreground">
+                    {project.result}
+                  </span>
+                  <span className="text-sm text-primary font-medium group-hover:translate-x-1 transition-transform">
+                    Ver projeto →
+                  </span>
+                </div>
+              </div>
+            </motion.a>
+          ))}
         </div>
       </div>
     </section>

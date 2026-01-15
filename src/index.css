@@ -8,59 +8,68 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Wealth Theme: Deep Navy, Gold, Emerald */
-    --background: 222 47% 11%;
-    /* Deep Navy */
-    --foreground: 210 40% 98%;
+    /* Apple + Google Fusion Theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 45 93% 47%;
-    /* Gold */
-    --primary-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    /* Google Blue #4285F4 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 161 94% 30%;
-    /* Emerald Green */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 25%;
 
-    --accent: 199 89% 48%;
-    /* Bright Blue */
+    --accent: 142 71% 45%;
+    /* Google Green #34A853 */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 4 90% 58%;
+    /* Google Red #EA4335 */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 20%;
-    --input: 217 33% 20%;
-    --ring: 45 93% 47%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 221 83% 53%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
+    /* Google uses smaller radius */
 
-    /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(217 33% 17%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(35 100% 55%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(217 33% 15%) 100%);
+    /* Custom color tokens */
+    --google-yellow: 45 100% 51%;
+    /* #FBBC04 */
+    --google-red: 4 90% 58%;
+    /* #EA4335 */
+    --google-green: 142 71% 45%;
+    /* #34A853 */
+    --google-blue: 221 83% 53%;
+    /* #4285F4 */
 
-    --shadow-soft: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
-    --shadow-medium: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
-    --shadow-strong: 0 12px 48px -8px rgba(0, 0, 0, 0.5);
-    --shadow-accent: 0 8px 32px -8px hsl(45 93% 47% / 0.3);
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
+    --gradient-google: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(4 90% 58%) 50%, hsl(45 100% 51%) 100%);
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 45 93% 47%;
+    --shadow-soft: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    --shadow-medium: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+    --shadow-strong: 0 2px 6px 2px rgba(60, 64, 67, 0.15), 0 8px 24px 4px rgba(60, 64, 67, 0.15);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 20%;
-    --sidebar-ring: 45 93% 47%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 221 83% 53%;
   }
 }
 
@@ -82,23 +91,22 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass {
-    @apply bg-background/70 backdrop-blur-lg border border-white/10;
+    @apply bg-white/80 backdrop-blur-sm border border-border shadow-soft;
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:bg-white/10 transition-colors duration-300;
+    @apply bg-card border border-border shadow-soft hover:shadow-medium transition-shadow duration-300;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-white to-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground;
   }
 
   .container-responsive {
-    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+    @apply px-6 mx-auto max-w-6xl lg:px-8;
   }
 
-  .sticky-pattern {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 32px 32px;
+  .section-spacing {
+    @apply py-16 md:py-24;
   }
 }

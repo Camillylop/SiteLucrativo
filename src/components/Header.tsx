@@ -29,7 +29,7 @@ export function Header() {
     >
       <div className="container-responsive">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <a href="#" className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-2">
             Site<span className="text-primary">Lucrativo</span>
           </a>
 
@@ -39,7 +39,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-white transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
@@ -54,7 +54,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -77,7 +77,7 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-lg font-medium text-muted-foreground hover:text-white transition-colors py-2"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

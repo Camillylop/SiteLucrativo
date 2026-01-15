@@ -1,4 +1,3 @@
-import { ActionFunctionArgs } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 
@@ -31,23 +30,23 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-            <div className="container-responsive relative z-10">
+        <section className="py-32 bg-background">
+            <div className="container-responsive">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-20"
                 >
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium mb-6 backdrop-blur-sm">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-foreground text-sm font-medium mb-4 border border-border">
                         Dúvidas Comuns
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                        Perguntas <span className="text-gradient">Frequentes</span>
+                    <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-4 tracking-tight">
+                        Perguntas Frequentes
                     </h2>
-                    <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-                        Tire suas dúvidas sobre o processo de criação de sites profissionais.
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal">
+                        Tire suas dúvidas sobre o processo de criação de sites.
                     </p>
                 </motion.div>
 
@@ -59,13 +58,16 @@ export function FAQ() {
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                                transition={{ duration: 0.4, delay: index * 0.08 }}
                             >
-                                <AccordionItem value={`item-${index}`} className="border border-white/10 bg-white/5 rounded-2xl px-6 data-[state=open]:bg-white/10 data-[state=open]:border-primary/20 transition-all duration-300">
-                                    <AccordionTrigger className="text-left text-white hover:text-primary hover:no-underline py-6 text-lg font-medium">
+                                <AccordionItem
+                                    value={`item-${index}`}
+                                    className="border border-border bg-background rounded-2xl px-6 data-[state=open]:bg-muted/30 data-[state=open]:border-primary/30 transition-all duration-300 shadow-soft hover:shadow-medium"
+                                >
+                                    <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg font-semibold">
                                         {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-zinc-400 text-base leading-relaxed pb-6">
+                                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
                                         {faq.answer}
                                     </AccordionContent>
                                 </AccordionItem>

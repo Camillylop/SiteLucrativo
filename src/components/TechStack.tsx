@@ -3,36 +3,51 @@ import { Code2, Database, Globe, Layout, Smartphone, Zap } from "lucide-react";
 
 const technologies = [
     { name: "Design Moderno", icon: Layout },
-    { name: "Responsividade", icon: Smartphone },
-    { name: "Alta Performance", icon: Zap },
+    { name: "Responsivo", icon: Smartphone },
+    { name: "Performance", icon: Zap },
     { name: "SEO Otimizado", icon: Globe },
     { name: "Código Limpo", icon: Code2 },
     { name: "Hospedagem", icon: Database },
 ];
 
 export function TechStack() {
-    return (
-        <section className="py-12 bg-background border-y border-white/5 relative overflow-hidden">
-            <div className="absolute inset-0 bg-primary/5 blur-3xl" />
+    // Duplicar os itens para criar o efeito de loop infinito
+    const duplicatedTechs = [...technologies, ...technologies, ...technologies];
 
-            <div className="container-responsive relative z-10">
-                <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-                    {technologies.map((tech, index) => (
-                        <motion.div
-                            key={tech.name}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="flex items-center gap-2 group cursor-default"
+    return (
+        <section className="py-12 border-y border-border bg-muted/30 overflow-hidden">
+            <div className="relative">
+                {/* Carrossel infinito - funciona em todas as telas */}
+                <motion.div
+                    className="flex gap-12 py-2"
+                    animate={{
+                        x: [0, -1200],
+                    }}
+                    transition={{
+                        x: {
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            duration: 25,
+                            ease: "linear",
+                        },
+                    }}
+                >
+                    {duplicatedTechs.map((tech, index) => (
+                        <div
+                            key={`${tech.name}-${index}`}
+                            className="flex items-center gap-2.5 whitespace-nowrap flex-shrink-0"
                         >
-                            <tech.icon className="w-5 h-5 text-zinc-600 group-hover:text-primary transition-colors duration-300" />
-                            <span className="text-zinc-500 font-medium text-sm md:text-base group-hover:text-zinc-300 transition-colors duration-300">
+                            <tech.icon className="w-4 h-4 text-muted-foreground" />
+                            <span className="text-sm font-medium text-muted-foreground">
                                 {tech.name}
                             </span>
-                        </motion.div>
+                        </div>
                     ))}
-                </div>
+                </motion.div>
+
+                {/* Gradientes nas bordas para efeito de fade */}
+                <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/30 via-muted/30 to-transparent pointer-events-none z-10" />
+                <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/30 via-muted/30 to-transparent pointer-events-none z-10" />
             </div>
         </section>
     );
