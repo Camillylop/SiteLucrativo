@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CheckCircle, Star } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
 
 export function FinalCTA() {
   return (

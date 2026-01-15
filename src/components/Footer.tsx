@@ -1,6 +1,6 @@
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { MessageCircle, MapPin } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="#" className="text-2xl font-bold mb-4 block text-foreground flex items-center gap-2">
-              Site<span className="text-primary">Lucrativo</span>
+              Nexus<span className="text-primary">Studio</span>
             </a>
             <p className="text-zinc-400 mb-6 text-sm md:text-base">
               Criação de sites profissionais focados em resultados.
@@ -48,18 +48,11 @@ export function Footer() {
                 className="flex items-center gap-3 text-zinc-400 hover:text-primary transition-colors"
               >
                 <MessageCircle className="w-5 h-5 text-primary" />
-                (11) 99999-9999
-              </a>
-              <a
-                href="mailto:contato@sitelucrativo.com.br"
-                className="flex items-center gap-3 text-zinc-400 hover:text-primary transition-colors"
-              >
-                <Mail className="w-5 h-5 text-primary" />
-                contato@sitelucrativo.com.br
+                (19) 99711-7300
               </a>
               <div className="flex items-center gap-3 text-zinc-400">
                 <MapPin className="w-5 h-5 text-primary" />
-                São Paulo, SP - Brasil
+                Campinas, SP - Brasil
               </div>
             </div>
 
@@ -70,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-center text-sm text-zinc-500">
-          <p>© {new Date().getFullYear()} SiteLucrativo. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Nexus Studio. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

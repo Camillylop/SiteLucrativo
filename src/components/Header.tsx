@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
@@ -30,7 +30,7 @@ export function Header() {
       <div className="container-responsive">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-2">
-            Site<span className="text-primary">Lucrativo</span>
+            Nexus<span className="text-primary">Studio</span>
           </a>
 
           {/* Desktop Navigation */}
