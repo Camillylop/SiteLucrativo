@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# SiteLucrativo - Criação de Sites Profissionais
 
-## Project info
+Projeto web desenvolvido para a marca SiteLucrativo, focado na oferta de serviços de criação de sites profissionais, landing pages e soluções digitais de alta conversão.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologias Utilizadas
 
-## How can I edit this code?
+Este projeto foi construído utilizando as tecnologias mais modernas do mercado para garantir performance, escalabilidade e qualidade de código:
 
-There are several ways of editing your application.
+- **React**: Biblioteca Javascript para construção de interfaces.
+- **TypeScript**: Superset do Javascript que adiciona tipagem estática.
+- **Vite**: Build tool rápida e leve.
+- **Tailwind CSS**: Framework CSS utilitário para estilização ágil e responsiva.
+- **Shadcn UI**: Coleção de componentes reutilizáveis e acessíveis.
+- **Framer Motion**: Biblioteca para animações fluidas e complexas.
+- **Lucide React**: Ícones leves e flexíveis.
 
-**Use Lovable**
+## Como Iniciar o Projeto Localmente
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+    cd site-lucrativo-main
+    ```
 
-Changes made via Lovable will be committed automatically to this repo.
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-**Use your preferred IDE**
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    O projeto estará rodando em `http://localhost:8080` (ou outra porta disponível).
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Estrutura do Projeto
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- `src/components`: Componentes reutilizáveis da aplicação.
+- `src/pages`: Páginas principais (Landing Page).
+- `src/index.css`: Definições globais de estilos e tokens do tema.
+- `src/lib`: Funções utilitárias.
 
-Follow these steps:
+## Personalização do Tema
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+O tema "Modern Wealth" está definido no arquivo `src/index.css` utilizando variáveis CSS HSL, permitindo fácil alteração da paleta de cores global.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Deploy
 
-# Step 3: Install the necessary dependencies.
-npm i
+O projeto pode ser facilmente implantado em plataformas como Vercel, Netlify ou qualquer hospedagem estática que suporte builds de React/Vite.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+© 2024 SiteLucrativo. Todos os direitos reservados.
