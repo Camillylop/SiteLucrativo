@@ -19,8 +19,8 @@ const projects = [
     link: "#"
   },
   {
-    segment: "Institucional",
-    title: "Aurum Legal",
+    segment: "Profissional",
+    title: "Advocacia Almeida&Torres",
     description: "Landing page premium focada em autoridade.",
     result: "2x consultas",
     image: "/images/lawyer.png",
