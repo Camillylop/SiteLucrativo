@@ -30,7 +30,7 @@ export function Header() {
       <div className="container-responsive">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-2xl font-bold text-foreground tracking-tight flex items-center">
-            <img src="/logo.png" alt="Vellaro" className="w-48 h-48 object-contain -mr-16" />
+            <img src="/logo.png" alt="Vellaro" className="w-32 h-32 md:w-48 md:h-48 object-contain -mr-10 md:-mr-16" />
             <span className={`bg-gradient-to-r from-[#6DD5B0] to-[#5B9FED] bg-clip-text text-transparent transition-opacity duration-300 font-medium ${scrolled ? 'opacity-0' : 'opacity-100'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>ellaro</span>
           </a>
 
