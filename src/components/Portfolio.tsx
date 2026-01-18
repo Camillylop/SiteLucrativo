@@ -7,7 +7,7 @@ const projects = [
     title: "CoachPro",
     description: "Site profissional com sistema de agendamento integrado.",
     result: "+40% conversão",
-    image: "/images/nutri.png",
+    image: "/images/coachpro.png",
     link: "https://coachpro-two.vercel.app/"
   },
   {

@@ -9,8 +9,9 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <div>
-            <a href="#" className="text-2xl font-bold mb-4 block text-foreground flex items-center gap-2">
-              Nexu<span className="text-primary">Studio</span>
+            <a href="#" className="text-2xl font-bold mb-4 block text-foreground flex items-center">
+              <img src="/logo.png" alt="Vellaro" className="w-48 h-48 object-contain -mr-16" />
+              <span className="bg-gradient-to-r from-[#6DD5B0] to-[#5B9FED] bg-clip-text text-transparent font-medium" style={{ fontFamily: 'Montserrat, sans-serif' }}>ellaro</span>
             </a>
             <p className="text-zinc-400 mb-6 text-sm md:text-base">
               Criação de sites profissionais focados em resultados.
@@ -63,7 +64,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-center text-sm text-zinc-500">
-          <p>© {new Date().getFullYear()} NexuStudio. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Vellaro. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
