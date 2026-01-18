@@ -4,11 +4,11 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     segment: "Landing Page",
-    title: "NutriSport",
+    title: "CoachPro",
     description: "Site profissional com sistema de agendamento integrado.",
     result: "+40% conversão",
     image: "/images/nutri.png",
-    link: "https://nutrisport-beta.vercel.app/"
+    link: "https://coachpro-two.vercel.app/"
   },
   {
     segment: "Institucional",
