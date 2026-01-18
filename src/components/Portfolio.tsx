@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    segment: "Nutricionista",
+    segment: "Landing Page",
     title: "NutriSport",
     description: "Site profissional com sistema de agendamento integrado.",
     result: "+40% conversão",
@@ -11,7 +11,7 @@ const projects = [
     link: "https://nutrisport-beta.vercel.app/"
   },
   {
-    segment: "Odontologia",
+    segment: "Institucional",
     title: "Apex Dental",
     description: "Presença digital moderna com galeria de casos.",
     result: "#1 no Google",
@@ -19,12 +19,12 @@ const projects = [
     link: "#"
   },
   {
-    segment: "Advocacia",
+    segment: "Institucional",
     title: "Aurum Legal",
     description: "Landing page premium focada em autoridade.",
     result: "2x consultas",
     image: "/images/lawyer.png",
-    link: "#"
+    link: "https://institucional-advocacia-red.vercel.app/"
   },
   {
     segment: "E-commerce",
