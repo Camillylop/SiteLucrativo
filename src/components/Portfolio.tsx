@@ -28,11 +28,11 @@ const projects = [
   },
   {
     segment: "E-commerce",
-    title: "Moderne",
-    description: "Loja completa com catálogo e checkout.",
+    title: "GymWolf",
+    description: "Loja de roupas fitness com design agressivo.",
     result: "Vendas 24/7",
-    image: "/images/fashion.png",
-    link: "#"
+    image: "/images/gymwolf.png",
+    link: "https://gymwolf-rho.vercel.app/"
   },
 ];
 
