@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
-import { Building2, Briefcase, Store, Rocket } from "lucide-react";
+import { Building2, Briefcase, Store, Rocket, ArrowUpRight } from "lucide-react";
 
 const services = [
   {
     icon: Building2,
-    title: "Institucional",
-    description: "Presença digital profissional para empresas.",
-    color: "bg-[#4285F4]", // Google Blue
+    title: "Você perde clientes porque não é encontrado no Google?",
+    description: "Ajudamos empresas a serem descobertas por quem procura seus serviços online.",
+    color: "bg-primary", // Uses Brand Blue defined in primary
   },
   {
     icon: Briefcase,
-    title: "Profissionais",
-    description: "Sites para médicos, advogados e consultores.",
-    color: "bg-[#EA4335]", // Google Red
+    title: "Como você transmite autoridade e confiança online?",
+    description: "Criamos presença digital que reflete sua expertise e diferencia você da concorrência.",
+    color: "bg-[hsl(142,70%,45%)]", // Brand Green
   },
   {
     icon: Store,
-    title: "E-commerce",
-    description: "Lojas virtuais completas e funcionais.",
-    color: "bg-[#FBBC04]", // Google Yellow
+    title: "Quer vender 24h sem depender de redes sociais?",
+    description: "Desenvolvemos sua loja virtual para você ter autonomia e escalar suas vendas.",
+    color: "bg-[hsl(262,80%,60%)]", // Brand Purple
   },
   {
     icon: Rocket,
-    title: "Landing Pages",
-    description: "Páginas focadas em conversão.",
-    color: "bg-[#34A853]", // Google Green
+    title: "Como você transforma visitantes em clientes?",
+    description: "Criamos páginas estratégicas que guiam seu público até a decisão de compra.",
+    color: "bg-[hsl(20,90%,60%)]", // Brand Orange
   },
 ];
 
@@ -42,15 +42,15 @@ export function Services() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-4 tracking-tight">
-            Serviços
+            Como podemos ajudar você
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal">
-            Soluções web adaptadas para o seu negócio.
+            Entendemos os desafios de quem precisa crescer online e temos soluções personalizadas.
           </p>
         </motion.div>
 
-        {/* Services Grid - Google Material Design inspired */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* Services Grid - Bento Style */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -59,22 +59,31 @@ export function Services() {
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.08,
-                ease: [0.16, 1, 0.3, 1]
+                delay: index * 0.1,
+                ease: "easeOut"
               }}
-              className="group p-8 rounded-2xl bg-background border border-border hover:shadow-strong transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden p-8 rounded-3xl bg-card border border-border hover:shadow-strong transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Google-style colored icon */}
-              <div className={`w-14 h-14 rounded-xl ${service.color} text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                <service.icon className="w-7 h-7" />
-              </div>
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent to-${service.color.replace('bg-', '')}/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150`} />
 
-              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Icon Wrapper */}
+                <div className={`w-14 h-14 rounded-2xl ${service.color} text-white flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
+                  <service.icon className="w-7 h-7" />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 tracking-tight">
+                  {service.title}
+                </h3>
+
+                <p className="text-muted-foreground leading-relaxed flex-grow">
+                  {service.description}
+                </p>
+
+                <div className="mt-6 pt-6 border-t border-border/50 flex items-center text-primary font-medium opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  Saiba mais <ArrowUpRight className="ml-2 w-4 h-4" />
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -88,7 +97,7 @@ export function Services() {
           className="mt-16 text-center"
         >
           <p className="text-muted-foreground text-sm max-w-3xl mx-auto">
-            Todos os projetos incluem SEO otimizado, design responsivo, performance de ponta e suporte dedicado.
+            Em cada projeto, trabalhamos lado a lado com você para garantir que sua presença online gere resultados reais.
           </p>
         </motion.div>
       </div>

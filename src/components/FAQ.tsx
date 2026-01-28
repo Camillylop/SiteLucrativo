@@ -4,27 +4,24 @@ import { motion } from "framer-motion";
 const faqs = [
     {
         question: "Quanto custa para fazer um site?",
-        answer: "O investimento varia de acordo com a complexidade do projeto. Sites institucionais simples começam com valores mais acessíveis, enquanto lojas virtuais ou sistemas personalizados requerem maior investimento. Entre em contato pelo WhatsApp para um orçamento personalizado gratuito."
+        answer: "Cada projeto é único, assim como seu negócio. O investimento depende dos seus objetivos e do que você precisa para alcançá-los. Vamos conversar sem compromisso para entender seu desafio e criar uma proposta personalizada que faça sentido para você."
     },
     {
         question: "Quanto tempo leva para ficar pronto?",
-        answer: "Para sites institucionais e landing pages, o prazo médio é de 5 a 10 dias úteis após o recebimento de todo o material (textos e imagens). Projetos mais complexos podem levar de 15 a 30 dias."
+        answer: "Trabalhamos com agilidade sem comprometer a qualidade. Sites mais simples ficam prontos em 5 a 10 dias úteis, enquanto projetos mais robustos levam de 15 a 30 dias. O importante é que você tenha um site que realmente funciona, não apenas algo rápido."
     },
     {
         question: "O site vai funcionar no celular?",
         answer: "Sim! Todos os sites que desenvolvo são 100% responsivos, ou seja, se adaptam perfeitamente a computadores, tablets e smartphones."
     },
-    {
-        question: "Preciso pagar mensalidade?",
-        answer: "Eu não cobro mensalidade pelo desenvolvimento. O site é seu! Você terá apenas os custos anuais de domínio (aprox. R$ 40/ano) e hospedagem (aprox. R$ 30/mês), que são pagos diretamente aos provedores."
-    },
+
     {
         question: "Como funciona o pagamento?",
-        answer: "Geralmente trabalho com 50% de entrada para início do projeto e 50% na aprovação final, antes da publicação. Aceito PIX, transferência e cartão de crédito (com parcelamento)."
+        answer: "Trabalhamos com 50% no início do projeto e 50% na aprovação final, antes de publicar. Aceitamos PIX, transferência e cartão de crédito com parcelamento. Queremos que você se sinta confortável e seguro durante todo o processo."
     },
     {
         question: "O site aparece no Google?",
-        answer: "Sim, desenvolvo o site seguindo as melhores práticas de SEO (Otimização para Mecanismos de Busca) para facilitar que seu cliente te encontre no Google."
+        answer: "Sim! Otimizamos seu site para que você seja encontrado por quem procura seus serviços. Afinal, de que adianta ter um site bonito se seus clientes não conseguem te achar? Trabalhamos para que você apareça nas buscas certas."
     }
 ];
 
@@ -46,7 +43,7 @@ export function FAQ() {
                         Perguntas Frequentes
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal">
-                        Tire suas dúvidas sobre o processo de criação de sites.
+                        Respondemos suas principais dúvidas com total transparência.
                     </p>
                 </motion.div>
 

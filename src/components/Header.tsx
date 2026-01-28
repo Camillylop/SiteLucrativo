@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
-const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Quero conversar sobre como posso atrair mais clientes online.";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
   { href: "#portfolio", label: "Portfólio" },
-  { href: "#como-funciona", label: "Como Funciona" },
+  { href: "#como-funciona", label: "Nossa Parceria" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -45,6 +46,7 @@ export function Header() {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle />
             <Button variant="cta" size="sm" className="shadow-accent/20" asChild>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" />
@@ -54,13 +56,16 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 

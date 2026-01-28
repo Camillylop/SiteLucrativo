@@ -8,68 +8,115 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Apple + Google Fusion Theme */
+    /* Premium & Confident Theme */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 222 47% 11%;
+    /* Deep Navy for text instead of black */
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 222 47% 11%;
 
+    /* Brand Colors */
     --primary: 221 83% 53%;
-    /* Google Blue #4285F4 */
-    --primary-foreground: 0 0% 100%;
+    /* Bright Royal Blue */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 25%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 142 71% 45%;
-    /* Google Green #34A853 */
-    --accent-foreground: 0 0% 100%;
+    --accent: 172 80% 45%;
+    /* Vibrant Teal representing Growth */
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 4 90% 58%;
-    /* Google Red #EA4335 */
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 221 83% 53%;
 
-    --radius: 0.5rem;
-    /* Google uses smaller radius */
+    --radius: 0.75rem;
+    /* Slightly rounder for modern feel */
 
-    /* Custom color tokens */
-    --google-yellow: 45 100% 51%;
-    /* #FBBC04 */
-    --google-red: 4 90% 58%;
-    /* #EA4335 */
-    --google-green: 142 71% 45%;
-    /* #34A853 */
-    --google-blue: 221 83% 53%;
-    /* #4285F4 */
+    /* Feature Colors (Service Categories) */
+    --brand-blue: 221 83% 53%;
+    --brand-green: 142 70% 45%;
+    --brand-purple: 262 80% 60%;
+    --brand-orange: 20 90% 60%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
-    --gradient-google: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(4 90% 58%) 50%, hsl(45 100% 51%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(172 80% 45%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
 
-    --shadow-soft: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    --shadow-medium: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
-    --shadow-strong: 0 2px 6px 2px rgba(60, 64, 67, 0.15), 0 8px 24px 4px rgba(60, 64, 67, 0.15);
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-strong: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-accent: 0 0 20px 0 hsl(221 83% 53% / 0.2);
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 0%;
-    --sidebar-primary: 221 83% 53%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Premium Dark Theme - Deep Slate Blue base */
+    --background: 222 47% 7%;
+    /* Darker, richer blue-black */
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    /* Lighter, electric blue for dark mode */
+    --primary-foreground: 222 47.4% 11.2%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20.2% 70%;
+
+    --accent: 172 80% 45%;
+    /* Keep Teal pop */
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 25% 15%;
+    --input: 217 25% 15%;
+    --ring: 212 26% 87%;
+
+    /* Dark Mode specific shadows */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    --shadow-accent: 0 0 30px 0 hsl(221 83% 53% / 0.15);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 95%;
-    --sidebar-accent-foreground: 0 0% 0%;
-    --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217 91.2% 59.8%;
   }
 }
 
@@ -86,6 +133,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
@@ -103,10 +151,10 @@ All colors MUST be HSL.
   }
 
   .container-responsive {
-    @apply px-6 mx-auto max-w-6xl lg:px-8;
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
   }
 
   .section-spacing {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-24;
   }
 }

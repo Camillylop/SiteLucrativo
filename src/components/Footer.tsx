@@ -1,6 +1,6 @@
 import { MessageCircle, MapPin } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Quero conversar sobre como posso atrair mais clientes online.";
 
 export function Footer() {
   return (
@@ -14,8 +14,8 @@ export function Footer() {
               <span className="bg-gradient-to-r from-[#6DD5B0] to-[#5B9FED] bg-clip-text text-transparent font-medium" style={{ fontFamily: 'Montserrat, sans-serif' }}>ellaro</span>
             </a>
             <p className="text-zinc-400 mb-6 text-sm md:text-base">
-              Criação de sites profissionais focados em resultados.
-              Transforme sua presença online e conquiste mais clientes.
+              Ajudamos profissionais e empresas a serem encontrados
+              por quem realmente precisa dos seus serviços.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ export function Footer() {
                 Portfólio
               </a>
               <a href="#como-funciona" className="text-zinc-400 hover:text-primary transition-colors">
-                Como Funciona
+                Nossa Parceria
               </a>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors">
                 Contato
@@ -58,7 +58,7 @@ export function Footer() {
             </div>
 
             <p className="mt-6 text-sm text-zinc-400">
-              Atendo todo o Brasil. O primeiro contato é sempre gratuito!
+              Vamos conversar sem compromisso sobre seus desafios!
             </p>
           </div>
         </div>

@@ -2,74 +2,59 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CheckCircle, Star } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Gostaria de solicitar um orçamento para criação de site.";
+const WHATSAPP_LINK = "https://wa.me/5519997117300?text=Olá! Quero conversar sobre como posso atrair mais clientes online.";
 
 export function FinalCTA() {
   return (
-    <section className="py-32 bg-muted/30">
-      <div className="container-responsive">
+    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+      <div className="container-responsive relative z-10">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-5xl mx-auto bg-background rounded-[2.5rem] p-8 md:p-20 text-center border border-border shadow-strong relative overflow-hidden"
+          className="max-w-5xl mx-auto rounded-[3rem] p-8 md:p-24 text-center border border-border shadow-2xl relative overflow-hidden group"
         >
-          {/* Subtle Google Sparkle */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#4285F4]/5 rounded-full blur-3xl -mr-32 -mt-32" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#34A853]/5 rounded-full blur-3xl -ml-32 -mb-32" />
+          {/* Background - Clean & Premium Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background z-0" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-60" />
 
-          <div className="relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EA4335]/10 border border-[#EA4335]/20 text-[#EA4335] mb-8"
-            >
-              <Star className="w-4 h-4 fill-[#EA4335]" />
-              <span className="font-semibold text-sm">Vagas limitadas para este mês</span>
-            </motion.div>
+          <div className="relative z-10 flex flex-col items-center">
 
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-8 tracking-tight leading-[1.1]">
-              Pronto para ter um site que{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4285F4] to-[#34A853]">
-                realmente funciona?
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-8 tracking-tight leading-[1.1] max-w-4xl">
+              Pronto para levar seu negócio para o
+              <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                próximo nível?
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-normal leading-relaxed">
-              Não deixe seus concorrentes saírem na frente. Solicite agora um orçamento
-              gratuito e transforme sua presença digital em poucos dias.
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+              Sem pressa, sem compromisso. Apenas uma conversa franca sobre o potencial do seu projeto.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
               <Button
                 size="lg"
-                className="w-full sm:w-auto rounded-full px-10 h-14 text-lg font-medium bg-[#4285F4] hover:bg-[#357ae8] shadow-md hover:shadow-lg transition-all"
+                className="w-full sm:w-auto rounded-full px-10 h-14 text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all duration-300"
                 asChild
               >
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  Solicitar Orçamento Grátis
+                  Agendar conversa agora
                 </a>
               </Button>
             </div>
 
-            <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-6">
-              <div className="flex items-center gap-2 text-foreground font-medium text-sm">
-                <CheckCircle className="w-5 h-5 text-[#34A853]" />
-                <span>Resposta em até 1 hora</span>
+            {/* Minimalist Trust Indicators */}
+            <div className="mt-16 pt-8 border-t border-border/50 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
+              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                Disponibilidade imediata
               </div>
-              <div className="flex items-center gap-2 text-foreground font-medium text-sm">
-                <CheckCircle className="w-5 h-5 text-[#34A853]" />
-                <span>Orçamento sem compromisso</span>
-              </div>
-              <div className="flex items-center gap-2 text-foreground font-medium text-sm">
-                <CheckCircle className="w-5 h-5 text-[#34A853]" />
-                <span>Sem taxas escondidas</span>
+              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                Projetos Exclusivos
               </div>
             </div>
+
           </div>
         </motion.div>
       </div>

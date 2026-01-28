@@ -5,19 +5,19 @@ const testimonials = [
   {
     name: "Maria Santos",
     role: "Nutricionista",
-    content: "Finalmente tenho um site que reflete minha profissionalidade. Já recebi vários contatos de novos pacientes!",
+    content: "Antes eu dependia só de indicação. Agora sou encontrada no Google e recebo contatos de novos pacientes toda semana. Minha agenda mudou completamente!",
     rating: 5,
   },
   {
     name: "Carlos Mendes",
     role: "Advogado",
-    content: "O processo foi simples e o resultado superou minhas expectativas. Recomendo para qualquer profissional.",
+    content: "Eu tinha receio de investir em site, mas o retorno veio rápido. Hoje 40% dos meus clientes me encontram online. Valeu cada centavo!",
     rating: 5,
   },
   {
     name: "Ana Paula",
     role: "Proprietária de Clínica",
-    content: "Nosso site ficou moderno e nossos pacientes elogiam muito. Valeu cada centavo investido.",
+    content: "Paramos de perder tempo respondendo as mesmas perguntas no WhatsApp. O site faz isso por nós e só chegam leads realmente interessados.",
     rating: 5,
   },
 ];
@@ -37,10 +37,10 @@ export function Testimonials() {
             Depoimentos
           </span>
           <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-4 tracking-tight">
-            O que dizem nossos clientes
+            Como ajudamos profissionais como você
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal">
-            Feedback de profissionais que transformaram sua presença online.
+            Transformações reais de quem decidiu investir em presença digital.
           </p>
         </motion.div>
 
@@ -60,14 +60,14 @@ export function Testimonials() {
 
               <div className="flex gap-1 mb-6">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
+                  <Star key={i} className="w-5 h-5 fill-[#FF6B35] text-[#FF6B35]" />
                 ))}
               </div>
 
               <p className="text-muted-foreground mb-8 leading-relaxed">"{testimonial.content}"</p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-border">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4285F4] to-[#34A853] flex items-center justify-center text-white font-bold text-lg shadow-md">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0066CC] to-[#00A86B] flex items-center justify-center text-white font-bold text-lg shadow-md">
                   {testimonial.name.split(" ").map(n => n[0]).join("")}
                 </div>
                 <div>
